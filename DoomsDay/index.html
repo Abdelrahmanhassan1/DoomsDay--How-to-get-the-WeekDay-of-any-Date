@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>DoomsDay</title>
+  </head>
+  <body>
+    <div class="logo">
+      <h1>Get The WeekDay of any Date</h1>
+      <img src="./assets/calendar.png" />
+    </div>
+    <div class="input-form">
+      <form onSubmit="return false;">
+        <label>Day</label>
+        <input type="number" name="day" placeholder="Enter Day" id="day" />
+        <label>Month</label>
+        <input
+          type="number"
+          name="month"
+          placeholder="Enter Month"
+          id="month"
+        />
+        <label>Year</label>
+        <input type="number" name="year" placeholder="Enter Year" id="year" />
+        <button type="submit" onclick="getWeekDay()">Submit</button>
+      </form>
+    </div>
+
+    <div class="result">
+      <h1>WeekDay is</h1>
+      <h1 id="weekday"></h1>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>

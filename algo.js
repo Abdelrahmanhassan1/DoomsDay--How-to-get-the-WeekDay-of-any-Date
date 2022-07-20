@@ -8,9 +8,9 @@ let days = {
   6: "SATURDAY",
 };
 
-var year = 1600;
-var month = 7;
-var day = 20;
+var year = 2000;
+var month = 2;
+var day = 2;
 
 // # find the dooms day of the year
 var first_two_numbers = year % 100;
@@ -88,7 +88,7 @@ if (first_two_numbers != 0 && first_two_numbers % 4 == 0) {
 }
 
 // # print(dictionary[month])
-// console.log(dictionary[month]);
+console.log(dictionary[month]);
 // # convert string to date object
 var given_date =
   year.toString() + "/" + month.toString() + "/" + day.toString();
@@ -107,7 +107,10 @@ const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
 // # print(delta)
 var day_ref = (diffDays + actual_dooms_day) % 7;
-// console.log(day_ref);
+if (day_ref < 0) {
+  day_ref = day_ref + 7;
+}
+console.log(day_ref);
 console.log(days[day_ref]);
 
 // # print(-1 % 7)
