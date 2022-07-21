@@ -33,12 +33,16 @@ function getWeekDay() {
     alert("Invalid date");
     return;
   }
+
   var first_two_numbers = year % 100;
   var number_of_leap_years = Math.floor(first_two_numbers / 4);
+
   var total_added_years = (first_two_numbers % 28) + number_of_leap_years;
   var actual_added_years = total_added_years % 7;
+
   var dooms_year = year - (year % 100);
   var dooms_day = 0;
+
   if ((dooms_year - 1700) % 400 == 0) {
     dooms_day = 0;
   } else if ((dooms_year - 1800) % 400 == 0) {
@@ -48,6 +52,7 @@ function getWeekDay() {
   } else if ((dooms_year - 2000) % 400 == 0) {
     dooms_day = 2;
   }
+
   var actual_dooms_day = (dooms_day + actual_added_years) % 7;
   if (first_two_numbers != 0 && first_two_numbers % 4 == 0) {
     // # leap year
@@ -79,6 +84,7 @@ function getWeekDay() {
       12: year.toString() + "/12/12",
     };
   }
+
   var given_date =
     year.toString() + "/" + month.toString() + "/" + day.toString();
 
@@ -86,9 +92,12 @@ function getWeekDay() {
   const date2 = new Date(dictionary[month]);
   const diffTime = date1.getTime() - date2.getTime();
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
   var day_ref = (diffDays + actual_dooms_day) % 7;
+
   if (day_ref < 0) {
     day_ref = day_ref + 7;
   }
+
   weekday.innerHTML = days[day_ref];
 }
