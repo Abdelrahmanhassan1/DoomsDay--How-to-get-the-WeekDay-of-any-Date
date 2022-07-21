@@ -2,4 +2,7 @@
 
 A Website for deploying the algorithm of knowing the weekday of any date starting from 1000 year.
 
-The Website depolys the algorithm of getting the weekday of any date using DoomsDay Method.
+<h1>DEMO</h1>
+
+https://user-images.githubusercontent.com/66575436/180180354-2560895f-ef9f-471c-9f75-31268f208953.mp4
+
